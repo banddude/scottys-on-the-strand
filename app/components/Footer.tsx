@@ -27,7 +27,7 @@ const Footer = ({ className = '' }: FooterProps) => {
               alt="Scotty's on the Strand"
               width={400}
               height={160}
-              className="w-full max-w-sm h-auto"
+              className="w-full max-w-sm h-auto rounded-lg shadow-lg"
             />
           </div>
 
