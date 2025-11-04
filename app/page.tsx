@@ -35,11 +35,11 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/breakfast" className="inline-flex items-center justify-center gap-2 bg-terracotta hover:bg-terracotta-dark text-white px-10 py-5 text-lg font-bold shadow-2xl transition-all duration-200">
+              <Link href="/breakfast" className="inline-flex items-center justify-center gap-2 bg-terracotta hover:bg-terracotta-dark text-white px-10 py-5 text-lg font-bold shadow-2xl transition-all duration-200 rounded-lg">
                 SEE THE MENU
                 <ChevronRight className="w-6 h-6" />
               </Link>
-              <a href="tel:3103187152" className="inline-flex items-center justify-center gap-2 bg-white text-stone-900 px-10 py-5 text-lg font-bold shadow-2xl hover:bg-sand-50 transition-all duration-200">
+              <a href="tel:3103187152" className="inline-flex items-center justify-center gap-2 bg-white text-stone-900 px-10 py-5 text-lg font-bold shadow-2xl hover:bg-sand-50 transition-all duration-200 rounded-lg">
                 <Phone className="w-6 h-6" />
                 (310) 318-7152
               </a>
@@ -119,7 +119,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Breakfast Card */}
-            <Link href="/breakfast" className="bg-white/95 hover:bg-white p-8 transition-all duration-300 group border-t-4 border-terracotta">
+            <Link href="/breakfast" className="bg-white/95 hover:bg-white p-8 transition-all duration-300 group border-t-4 border-terracotta rounded-lg">
               <h3 className="text-3xl font-black text-stone-900 mb-2">
                 BREAKFAST
               </h3>
@@ -130,7 +130,7 @@ export default function Home() {
             </Link>
 
             {/* Lunch Card */}
-            <Link href="/lunch" className="bg-white/95 hover:bg-white p-8 transition-all duration-300 group border-t-4 border-ocean">
+            <Link href="/lunch" className="bg-white/95 hover:bg-white p-8 transition-all duration-300 group border-t-4 border-ocean rounded-lg">
               <h3 className="text-3xl font-black text-stone-900 mb-2">
                 LUNCH
               </h3>
@@ -141,7 +141,7 @@ export default function Home() {
             </Link>
 
             {/* Sunset Specials Card */}
-            <Link href="/sunset-specials" className="bg-terracotta/95 hover:bg-terracotta p-8 transition-all duration-300 group border-t-4 border-sand-50">
+            <Link href="/sunset-specials" className="bg-terracotta/95 hover:bg-terracotta p-8 transition-all duration-300 group border-t-4 border-sand-50 rounded-lg">
               <h3 className="text-3xl font-black text-white mb-2">
                 SUNSET DEALS
               </h3>
@@ -152,7 +152,7 @@ export default function Home() {
             </Link>
 
             {/* Dinner Card */}
-            <Link href="/dinner" className="bg-white/95 hover:bg-white p-8 transition-all duration-300 group border-t-4 border-stone-800">
+            <Link href="/dinner" className="bg-white/95 hover:bg-white p-8 transition-all duration-300 group border-t-4 border-stone-800 rounded-lg">
               <h3 className="text-3xl font-black text-stone-900 mb-2">
                 DINNER & DRINKS
               </h3>
@@ -206,7 +206,7 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <Link href="/location" className="inline-block bg-terracotta hover:bg-terracotta-dark text-white px-12 py-5 text-xl font-bold transition-all">
+            <Link href="/location" className="inline-block bg-terracotta hover:bg-terracotta-dark text-white px-12 py-5 text-xl font-bold transition-all rounded-lg">
               GET DIRECTIONS
             </Link>
           </div>
