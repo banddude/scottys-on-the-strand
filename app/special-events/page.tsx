@@ -4,9 +4,9 @@ const basePath = '/scottys-on-the-strand';
 
 export default function SpecialEvents() {
   return (
-    <div className="min-h-screen bg-gradient-beach pt-[60px]">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Hero Section */}
-      <section className="relative text-white overflow-hidden min-h-screen flex items-center">
+      <section className="relative text-white overflow-hidden min-h-screen flex items-center pt-[60px]">
         {/* Image Background */}
         <div className="absolute inset-0">
           <Image
