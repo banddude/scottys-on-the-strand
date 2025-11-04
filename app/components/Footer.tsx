@@ -111,21 +111,27 @@ const Footer = ({ className = '' }: FooterProps) => {
           {/* Social Media Icons */}
           <div className="flex gap-3">
             <a
-              href="#"
+              href="https://www.facebook.com/ScottysOnTheStrand/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-11 h-11 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-orange-500/30 flex items-center justify-center transition-all duration-200 group border border-white/20 hover:border-orange-400/50 shadow-modern"
               aria-label="Facebook"
             >
               <Facebook className="w-5 h-5 text-white group-hover:text-orange-400 transition-colors duration-200" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/scottysonthestrand/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-11 h-11 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-orange-500/30 flex items-center justify-center transition-all duration-200 group border border-white/20 hover:border-orange-400/50 shadow-modern"
               aria-label="Instagram"
             >
               <Instagram className="w-5 h-5 text-white group-hover:text-orange-400 transition-colors duration-200" />
             </a>
             <a
-              href="#"
+              href="https://www.yelp.com/biz/scottys-on-the-strand-hermosa-beach"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-11 h-11 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-orange-500/30 flex items-center justify-center transition-all duration-200 group border border-white/20 hover:border-orange-400/50 shadow-modern"
               aria-label="Yelp"
             >
