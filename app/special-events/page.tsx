@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+const basePath = process.env.NODE_ENV === 'production' ? '/scottys-on-the-strand' : '';
+
 export default function SpecialEvents() {
   return (
     <div className="min-h-screen bg-gradient-beach pt-[60px]">
@@ -7,7 +9,7 @@ export default function SpecialEvents() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/general/specialEvents_1.jpg"
+            src={`${basePath}/images/general/specialEvents_1.jpg`}
             alt="Exclusive Private Dining Experience"
             fill
             className="object-cover"
@@ -164,7 +166,7 @@ export default function SpecialEvents() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="group relative h-80 rounded-luxury-lg overflow-hidden shadow-luxury hover:shadow-luxury-xl transition-all duration-500">
               <Image
-                src="/images/general/imagesbanquet1.jpg"
+                src={`${basePath}/images/general/imagesbanquet1.jpg`}
                 alt="Elegant Banquet Setup"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -173,7 +175,7 @@ export default function SpecialEvents() {
             </div>
             <div className="group relative h-80 rounded-luxury-lg overflow-hidden shadow-luxury hover:shadow-luxury-xl transition-all duration-500">
               <Image
-                src="/images/general/imagesGreek National Valeyball Team 007.jpg"
+                src={`${basePath}/images/general/imagesGreek National Valeyball Team 007.jpg`}
                 alt="Celebration Gathering"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -182,7 +184,7 @@ export default function SpecialEvents() {
             </div>
             <div className="group relative h-80 rounded-luxury-lg overflow-hidden shadow-luxury hover:shadow-luxury-xl transition-all duration-500">
               <Image
-                src="/images/general/imagesGreek National Valeyball Team 011.jpg"
+                src={`${basePath}/images/general/imagesGreek National Valeyball Team 011.jpg`}
                 alt="Private Dining Experience"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"

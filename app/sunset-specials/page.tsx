@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { Sunset, Coffee } from 'lucide-react';
 
+const basePath = process.env.NODE_ENV === 'production' ? '/scottys-on-the-strand' : '';
+
 export default function SunsetSpecials() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 via-white to-orange-50 pt-[60px]">
@@ -28,7 +30,7 @@ export default function SunsetSpecials() {
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow border-4 border-orange-500/20">
               <div className="relative h-64 bg-gradient-to-br from-orange-100 to-ocean-100">
                 <Image
-                  src="/images/menu/pasta.gif"
+                  src={`${basePath}/images/menu/pasta.gif`}
                   alt="All You Can Eat Spaghetti"
                   fill
                   className="object-cover"
@@ -57,7 +59,7 @@ export default function SunsetSpecials() {
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow border-4 border-orange-500/20">
               <div className="relative h-64 bg-gradient-to-br from-orange-100 to-ocean-100">
                 <Image
-                  src="/images/menu/sunset1.jpg"
+                  src={`${basePath}/images/menu/sunset1.jpg`}
                   alt="Chef's Special"
                   fill
                   className="object-cover"
@@ -86,7 +88,7 @@ export default function SunsetSpecials() {
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow border-4 border-orange-500/20">
               <div className="relative h-64 bg-gradient-to-br from-orange-100 to-ocean-100">
                 <Image
-                  src="/images/menu/pork-roast.jpg"
+                  src={`${basePath}/images/menu/pork-roast.jpg`}
                   alt="Roast Pork"
                   fill
                   className="object-cover"
@@ -109,7 +111,7 @@ export default function SunsetSpecials() {
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow border-4 border-orange-500/20">
               <div className="relative h-64 bg-gradient-to-br from-orange-100 to-ocean-100">
                 <Image
-                  src="/images/menu/Roasted Chicken.jpg"
+                  src={`${basePath}/images/menu/Roasted Chicken.jpg`}
                   alt="Roasted Chicken"
                   fill
                   className="object-cover"
@@ -133,7 +135,7 @@ export default function SunsetSpecials() {
               <div className="md:flex">
                 <div className="relative md:w-1/2 h-64 md:h-auto bg-gradient-to-br from-orange-100 to-ocean-100">
                   <Image
-                    src="/images/menu/fishchips_1a.jpg"
+                    src={`${basePath}/images/menu/fishchips_1a.jpg`}
                     alt="Fish & Chips"
                     fill
                     className="object-cover"

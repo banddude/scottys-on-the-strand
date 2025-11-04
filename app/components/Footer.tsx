@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
 import { FooterProps } from './types';
 
+const basePath = process.env.NODE_ENV === 'production' ? '/scottys-on-the-strand' : '';
+
 const Footer = ({ className = '' }: FooterProps) => {
   const currentYear = new Date().getFullYear();
 
@@ -21,7 +23,7 @@ const Footer = ({ className = '' }: FooterProps) => {
           {/* Brand Section */}
           <div className="flex flex-col items-start">
             <Image
-              src="/images/logo-top.jpg"
+              src={`${basePath}/images/logo-top.jpg`}
               alt="Scotty's on the Strand"
               width={400}
               height={160}
