@@ -23,20 +23,18 @@ export default function SunsetSpecials() {
 
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="inline-block md:bg-black/30 md:backdrop-blur-sm md:px-12 md:py-8 md:rounded-2xl">
-            <div className="inline-flex items-center justify-center gap-4 mb-6">
-              <Sunset className="w-12 h-12 text-sand-100" />
-              <h1 className="text-6xl md:text-8xl font-black text-white" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.9)' }}>
-                Sunset Specials
-              </h1>
-            </div>
-            <p className="text-2xl md:text-3xl text-sand-100 font-semibold mb-2" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.7)' }}>
-              4:30 PM to 9:30 PM
-            </p>
-            <p className="text-lg md:text-xl text-sand-200 italic" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.7)' }}>
-              Not Valid on Holidays
-            </p>
+          <div className="inline-flex items-center justify-center gap-4 mb-6">
+            <Sunset className="w-12 h-12 text-sand-100 drop-shadow-2xl" />
+            <h1 className="text-6xl md:text-8xl font-black text-white md:backdrop-blur-md md:px-8 md:py-4" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.9)' }}>
+              Sunset Specials
+            </h1>
           </div>
+          <p className="text-2xl md:text-3xl text-sand-100 font-semibold mb-2 md:backdrop-blur-md md:inline-block md:px-6 md:py-2" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.7)' }}>
+            4:30 PM to 9:30 PM
+          </p>
+          <p className="text-lg md:text-xl text-sand-200 italic md:backdrop-blur-md md:inline-block md:px-6 md:py-2" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.7)' }}>
+            Not Valid on Holidays
+          </p>
         </div>
       </section>
 
