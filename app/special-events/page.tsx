@@ -6,7 +6,8 @@ export default function SpecialEvents() {
   return (
     <div className="min-h-screen bg-gradient-beach pt-[60px]">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      <section className="relative text-white overflow-hidden min-h-screen flex items-center">
+        {/* Image Background */}
         <div className="absolute inset-0">
           <Image
             src={`${basePath}/images/general/specialEvents_1.jpg`}
@@ -15,34 +16,26 @@ export default function SpecialEvents() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-ocean-900/70 via-ocean-800/60 to-ocean-900/80" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 py-24 text-center">
-          <div className="max-w-4xl mx-auto">
-            <div className="mb-6">
-              <div className="inline-block h-px w-24 bg-gradient-to-r from-transparent via-gold-400 to-transparent mb-8" />
-            </div>
-            <h1 className="font-serif text-display-md md:text-display-lg text-sand-50 mb-6">
-              Private Events & Celebrations
-            </h1>
-            <p className="text-heading-md md:text-heading-lg text-gold-300 font-light mb-8 tracking-wide">
-              An Exclusive Oceanfront Venue for Memorable Occasions
-            </p>
-            <p className="text-body-lg text-sand-200 mb-12 max-w-2xl mx-auto leading-relaxed-luxury">
-              Panoramic Pacific views, refined coastal cuisine, and impeccable service create the perfect backdrop for your most important celebrations
-            </p>
-            <a
-              href="tel:3103187152"
-              className="btn-accent inline-flex items-center gap-3"
-            >
-              <span>Inquire About Your Event</span>
-              <span className="text-sm tracking-wide">(310) 318-7152</span>
-            </a>
-          </div>
-        </div>
+        <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-sand-50 to-transparent" />
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <h1 className="text-6xl md:text-8xl font-black text-white mb-6" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.9)' }}>
+            Private Events & Celebrations
+          </h1>
+          <p className="text-2xl md:text-3xl text-sand-100 font-medium max-w-3xl mx-auto mb-8" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.7)' }}>
+            An Exclusive Oceanfront Venue for Memorable Occasions
+          </p>
+          <a
+            href="tel:3103187152"
+            className="inline-flex items-center justify-center gap-2 bg-terracotta hover:bg-terracotta-dark text-white px-12 py-5 text-xl font-bold transition-all rounded-lg shadow-lg"
+          >
+            <span>Inquire About Your Event</span>
+            <span className="text-lg">(310) 318-7152</span>
+          </a>
+        </div>
       </section>
 
       {/* Event Types Section */}
