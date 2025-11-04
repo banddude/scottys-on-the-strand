@@ -30,10 +30,10 @@ export default function SpecialEvents() {
           </p>
           <a
             href="tel:3103187152"
-            className="inline-flex items-center justify-center gap-2 bg-terracotta hover:bg-terracotta-dark text-white px-12 py-5 text-xl font-bold transition-all rounded-lg shadow-lg"
+            className="inline-flex flex-col items-center justify-center bg-terracotta hover:bg-terracotta-dark text-white px-12 py-5 text-xl font-bold transition-all rounded-lg shadow-lg"
           >
             <span>Inquire About Your Event</span>
-            <span className="text-lg">(310) 318-7152</span>
+            <span className="text-lg mt-1">(310) 318-7152</span>
           </a>
         </div>
       </section>
