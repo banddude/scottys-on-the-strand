@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const basePath = process.env.NODE_ENV === 'production' ? '/scottys-on-the-strand' : '';
+const basePath = '/scottys-on-the-strand';
 
 export default function SpecialEvents() {
   return (

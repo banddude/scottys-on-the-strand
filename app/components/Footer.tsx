@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
 import { FooterProps } from './types';
 
-const basePath = process.env.NODE_ENV === 'production' ? '/scottys-on-the-strand' : '';
+const basePath = '/scottys-on-the-strand';
 
 const Footer = ({ className = '' }: FooterProps) => {
   const currentYear = new Date().getFullYear();

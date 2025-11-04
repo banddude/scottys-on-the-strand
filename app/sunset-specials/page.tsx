@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Sunset, Coffee } from 'lucide-react';
 
-const basePath = process.env.NODE_ENV === 'production' ? '/scottys-on-the-strand' : '';
+const basePath = '/scottys-on-the-strand';
 
 export default function SunsetSpecials() {
   return (
