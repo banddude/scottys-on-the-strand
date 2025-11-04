@@ -1,22 +1,41 @@
 import { Utensils, Wine, ChefHat } from 'lucide-react';
 
+const basePath = '/scottys-on-the-strand';
+
 export default function DinnerMenu() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-[60px]">
-      <div className="container mx-auto px-4 py-12">
-        {/* Page Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center gap-3 mb-4">
-            <Wine className="w-10 h-10 text-ocean-600" />
-            <h1 className="text-5xl font-bold text-slate-800">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      {/* Hero Section with Video Background */}
+      <section className="relative text-white overflow-hidden min-h-[60vh] flex items-center pt-[60px]">
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={`${basePath}/videos/dinner-background.mp4`} type="video/mp4" />
+        </video>
+
+        <div className="absolute inset-0 bg-black/50"></div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="inline-flex items-center justify-center gap-4 mb-6">
+            <Wine className="w-12 h-12 text-sand-100" />
+            <h1 className="text-6xl md:text-8xl font-black text-white" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.8), 0 2px 8px rgba(0,0,0,0.9)' }}>
               Dinner Menu
             </h1>
-            <ChefHat className="w-10 h-10 text-ocean-600" />
+            <ChefHat className="w-12 h-12 text-sand-100" />
           </div>
-          <p className="text-xl text-orange-600 font-medium">
+          <p className="text-2xl md:text-3xl text-sand-100 font-medium max-w-3xl mx-auto" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.7)' }}>
             Enjoy the sunset on the Pacific with a specialty cocktail
           </p>
         </div>
+      </section>
+
+      <div className="container mx-auto px-4 py-12">
 
         {/* Appetizers Section */}
         <section className="mb-16">
