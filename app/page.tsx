@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronRight, MapPin, Clock, Phone } from 'lucide-react';
 
+const basePath = process.env.NODE_ENV === 'production' ? '/scottys-on-the-strand' : '';
+
 export default function Home() {
   return (
     <div className="min-h-screen font-sans">
@@ -15,7 +17,7 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/videos/hero-clip-slowmo.mp4" type="video/mp4" />
+          <source src={`${basePath}/videos/hero-clip-slowmo.mp4`} type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-black/50"></div>
@@ -57,7 +59,7 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/videos/clip-12-56.mp4" type="video/mp4" />
+          <source src={`${basePath}/videos/clip-12-56.mp4`} type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-black/60"></div>
@@ -100,7 +102,7 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/videos/clip-28-08.mp4" type="video/mp4" />
+          <source src={`${basePath}/videos/clip-28-08.mp4`} type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-black/65"></div>
