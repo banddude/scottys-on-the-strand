@@ -7,7 +7,7 @@ export default function SunsetSpecials() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 via-white to-orange-50">
       {/* Hero Section with Video Background */}
-      <section className="relative text-white overflow-hidden min-h-screen md:min-h-[60vh] flex items-center pt-[60px]">
+      <section className="relative text-white overflow-hidden min-h-screen flex items-center pt-[60px]">
         {/* Video Background */}
         <video
           autoPlay
