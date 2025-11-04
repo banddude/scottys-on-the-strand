@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronRight, MapPin, Clock, Phone } from 'lucide-react';
-import InstagramFeed from './components/InstagramFeed';
 
 const basePath = process.env.NODE_ENV === 'production' ? '/scottys-on-the-strand' : '';
 
@@ -213,9 +212,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Instagram Feed Section */}
-      <InstagramFeed />
     </div>
   );
 }
