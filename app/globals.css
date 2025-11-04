@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #faf8f5;
+  --foreground: #334155;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+
+  /* Modern spacing scale */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f1f5f9;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-stone-200;
+  }
+
+  html {
+    @apply antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-foreground bg-background;
+    font-family: var(--font-inter);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--foreground);
+  }
+
+  h1 {
+    @apply text-display-md md:text-display-lg;
+  }
+
+  h2 {
+    @apply text-heading-xl md:text-display-sm;
+  }
+
+  h3 {
+    @apply text-heading-lg md:text-heading-xl;
+  }
+
+  h4 {
+    @apply text-heading-md md:text-heading-lg;
+  }
+
+  h5, h6 {
+    @apply text-heading-sm md:text-heading-md;
+  }
+
+  p {
+    @apply text-body-md mb-4;
+    font-family: var(--font-inter);
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  button {
+    @apply transition-all duration-200;
+  }
+}
+
+@layer components {
+  /* Modern text gradients */
+  .text-gradient-ocean {
+    @apply bg-gradient-to-r from-ocean-500 to-sage-500 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-sunset {
+    @apply bg-gradient-to-r from-terracotta-500 to-terracotta-dark bg-clip-text text-transparent;
+  }
+
+  .text-gradient-vibrant {
+    @apply bg-gradient-to-r from-ocean-400 via-sage-400 to-ocean-600 bg-clip-text text-transparent;
+  }
+
+  /* Modern backgrounds */
+  .bg-gradient-ocean-depth {
+    @apply bg-gradient-to-br from-ocean-500 to-ocean-900;
+  }
+
+  .bg-gradient-beach {
+    @apply bg-gradient-to-br from-sand-50 to-sand-100;
+  }
+
+  .bg-gradient-sunset {
+    @apply bg-gradient-to-r from-terracotta-400/10 via-terracotta-500/10 to-sage-400/10;
+  }
+
+  /* Subtle texture overlay */
+  .texture-overlay {
+    position: relative;
+  }
+
+  .texture-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.01) 2px,
+        rgba(0, 0, 0, 0.01) 4px
+      );
+    pointer-events: none;
+  }
+
+  /* Modern card styles */
+  .card-modern {
+    @apply bg-white rounded-modern-lg shadow-modern border border-stone-200 p-6;
+    @apply transition-all duration-200;
+  }
+
+  .card-modern:hover {
+    @apply shadow-modern-lg translate-y-[-1px];
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply bg-ocean-500 text-white px-6 py-3 rounded-modern font-semibold;
+    @apply shadow-modern hover:shadow-modern-lg hover:bg-ocean-600;
+    @apply transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-terracotta text-white px-6 py-3 rounded-modern font-semibold;
+    @apply shadow-modern hover:shadow-modern-lg hover:bg-terracotta-dark;
+    @apply transition-all duration-200;
+  }
+
+  .btn-accent {
+    @apply bg-terracotta text-white px-6 py-3 rounded-modern font-semibold;
+    @apply shadow-modern hover:shadow-modern-lg hover:bg-terracotta-dark;
+    @apply transition-all duration-200;
+  }
+
+  .btn-outline {
+    @apply border-2 border-ocean-500 text-ocean-500 px-6 py-3 rounded-modern font-semibold;
+    @apply hover:bg-ocean-500 hover:text-white hover:shadow-modern;
+    @apply transition-all duration-200;
+  }
+
+  /* Modern dividers */
+  .divider-modern {
+    @apply h-px bg-gradient-to-r from-transparent via-stone-300 to-transparent my-6;
+  }
+
+  .divider-accent {
+    @apply h-px bg-gradient-to-r from-transparent via-ocean-400 to-transparent my-6;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Modern animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes bounce-subtle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+  }
+
+  .animate-bounce-subtle {
+    animation: bounce-subtle 2s ease-in-out infinite;
+  }
+
+  /* Smooth scrolling sections */
+  .scroll-smooth-modern {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+  }
+
+  /* Modern glass morphism */
+  .glass-modern {
+    @apply bg-white/70 backdrop-blur-modern border border-stone-200/50;
+  }
+
+  .glass-ocean {
+    @apply bg-ocean-500/20 backdrop-blur-subtle border border-ocean-400/20;
+  }
+}
