@@ -43,9 +43,7 @@ export default function LocationPage() {
             1100 The Strand, Hermosa Beach, CA 90254
           </p>
           <a
-            href="https://www.google.com/maps/dir/?api=1&destination=1100+The+Strand,Hermosa+Beach,CA+90254"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="geo:33.8634,-118.3999?q=1100+The+Strand,Hermosa+Beach,CA+90254"
             className="inline-flex items-center justify-center bg-terracotta hover:bg-terracotta-dark text-white px-12 py-5 text-xl font-bold transition-all rounded-lg shadow-lg"
           >
             GET DIRECTIONS
