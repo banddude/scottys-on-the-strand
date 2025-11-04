@@ -1,10 +1,39 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronRight, MapPin, Clock, Phone } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const basePath = process.env.NODE_ENV === 'production' ? '/scottys-on-the-strand' : '';
 
+function getMenuForTime() {
+  const hour = new Date().getHours();
+
+  // Breakfast: 6:30 AM - 3:00 PM (6-15)
+  if (hour >= 6 && hour < 15) {
+    return '/breakfast';
+  }
+  // Sunset Specials: 4:30 PM - 9:30 PM (16-21)
+  else if (hour >= 16 && hour < 22) {
+    return '/sunset-specials';
+  }
+  // Dinner: 9:30 PM - close (22-23, 0-5)
+  else if (hour >= 22 || hour < 6) {
+    return '/dinner';
+  }
+  // Lunch: 3:00 PM - 4:30 PM (15)
+  else {
+    return '/lunch';
+  }
+}
+
 export default function Home() {
+  const [menuPath, setMenuPath] = useState('/breakfast');
+
+  useEffect(() => {
+    setMenuPath(getMenuForTime());
+  }, []);
   return (
     <div className="min-h-screen font-sans">
       {/* Hero Section with Video Background */}
@@ -35,7 +64,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/breakfast" className="inline-flex items-center justify-center gap-2 bg-terracotta hover:bg-terracotta-dark text-white px-10 py-5 text-lg font-bold shadow-2xl transition-all duration-200 rounded-lg">
+              <Link href={menuPath} className="inline-flex items-center justify-center gap-2 bg-terracotta hover:bg-terracotta-dark text-white px-10 py-5 text-lg font-bold shadow-2xl transition-all duration-200 rounded-lg">
                 SEE THE MENU
                 <ChevronRight className="w-6 h-6" />
               </Link>

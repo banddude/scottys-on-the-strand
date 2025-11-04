@@ -81,7 +81,7 @@ const Navigation = ({ className = '', currentPath }: NavigationProps) => {
         {/* Mobile Navigation */}
         <div
           className={`
-            md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-stone-900/95 backdrop-blur-sm
+            md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-stone-900/95 backdrop-blur-sm rounded-lg
             ${isOpen ? 'max-h-[36rem] pb-4 pt-4' : 'max-h-0'}
           `}
         >
@@ -93,7 +93,7 @@ const Navigation = ({ className = '', currentPath }: NavigationProps) => {
                   key={link.href}
                   href={link.href}
                   className={`
-                    relative px-5 py-3.5 text-base font-bold rounded-sm
+                    relative px-5 py-3.5 text-base font-bold rounded-lg
                     transition-all duration-200 overflow-hidden
                     ${
                       isActive
