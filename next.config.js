@@ -4,6 +4,8 @@ const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
+    loader: 'custom',
+    loaderFile: './imageLoader.js',
   },
   basePath: '/scottys-on-the-strand',
 }
