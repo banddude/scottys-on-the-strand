@@ -12,17 +12,21 @@ export const metadata = {
 export default function LocationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Hero Section with Image Background */}
+      {/* Hero Section with Map Background */}
       <section className="relative text-white overflow-hidden min-h-screen flex items-center pt-[60px]">
-        {/* Image Background */}
+        {/* Map Background */}
         <div className="absolute inset-0">
-          <Image
-            src={`${basePath}/images/general/specialEvents_1.jpg`}
-            alt="Scotty's on the Strand Location"
-            fill
-            className="object-cover"
-            priority
-          />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.6806442891817!2d-118.39995092398745!3d33.863389973213384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b3e2e5e5e5e5%3A0x1234567890abcdef!2s1100%20The%20Strand%2C%20Hermosa%20Beach%2C%20CA%2090254!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-full"
+            title="Scotty's on the Strand Location Map"
+          ></iframe>
         </div>
 
         <div className="absolute inset-0 bg-black/50"></div>
@@ -50,22 +54,6 @@ export default function LocationPage() {
       </section>
 
       <div className="container mx-auto px-4 py-12">
-        {/* Google Maps Section */}
-        <section className="mb-16">
-          <div className="overflow-hidden rounded-2xl shadow-2xl">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.6806442891817!2d-118.39995092398745!3d33.863389973213384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b3e2e5e5e5e5%3A0x1234567890abcdef!2s1100%20The%20Strand%2C%20Hermosa%20Beach%2C%20CA%2090254!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-              width="100%"
-              height="600"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full"
-              title="Scotty's on the Strand Location Map"
-            ></iframe>
-          </div>
-        </section>
 
         {/* Contact Info Section */}
         <section className="mb-16">
