@@ -8,23 +8,26 @@ import { useEffect, useState } from 'react';
 const basePath = process.env.NODE_ENV === 'production' ? '/scottys-on-the-strand' : '';
 
 function getMenuForTime() {
-  const hour = new Date().getHours();
+  const now = new Date();
+  const hour = now.getHours();
+  const minutes = now.getMinutes();
+  const timeInMinutes = hour * 60 + minutes;
 
-  // Breakfast: 6:30 AM - 3:00 PM (6-15)
-  if (hour >= 6 && hour < 15) {
-    return '/breakfast';
-  }
-  // Sunset Specials: 4:30 PM - 9:30 PM (16-21)
-  else if (hour >= 16 && hour < 22) {
-    return '/sunset-specials';
-  }
-  // Dinner: 9:30 PM - close (22-23, 0-5)
-  else if (hour >= 22 || hour < 6) {
+  // Dinner: 8:00 PM - 12:00 AM (1200 - 1440)
+  if (timeInMinutes >= 1200) {
     return '/dinner';
   }
-  // Lunch: 3:00 PM - 4:30 PM (15)
-  else {
+  // Breakfast: 12:00 AM - 11:30 AM (0 - 690)
+  else if (timeInMinutes < 690) {
+    return '/breakfast';
+  }
+  // Lunch: 11:30 AM - 4:30 PM (690 - 1020)
+  else if (timeInMinutes >= 690 && timeInMinutes < 1020) {
     return '/lunch';
+  }
+  // Sunset Specials: 4:30 PM - 8:00 PM (1020 - 1200)
+  else {
+    return '/sunset-specials';
   }
 }
 
