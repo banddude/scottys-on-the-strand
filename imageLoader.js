@@ -1,4 +1,5 @@
 module.exports = function imageLoader({ src }) {
-  const basePath = process.env.NODE_ENV === 'production' ? '/scottys-on-the-strand' : '';
+  // Always add basePath for static export builds
+  const basePath = '/scottys-on-the-strand';
   return `${basePath}${src}`;
 };
